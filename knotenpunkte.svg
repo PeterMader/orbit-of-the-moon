@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 800 800"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="mondbahn-ueberspitzt">
+
+    <!-- Ekliptik -->
+    <path
+      d="M400 600 A400 200 1 0 1 -5 400 A400 200 1 0 1 400 200"
+      style="stroke: #666666;
+        stroke-width: 1px;
+        fill: rgba(100, 100, 100, .3);" />
+
+    <!-- Ebene der Mondbahn --> <!-- M400 200 A400 200 1 0 1  -->
+    <path
+      d="M800 400 A400 200 1 0 1 400 600 A400 200 1 0 1 -5 400 A400 200 1 0 1 400 200"
+      style="stroke: #666666;
+        stroke-width: 2px;
+        fill: none;
+        transform-origin: 400px 400px;
+        transform: rotate(5.1deg);" />
+
+    <!-- Ekliptik -->
+    <path
+      d="M400 200 A400 200 1 0 1 800 400 A400 200 1 0 1 400 600"
+      style="stroke: #666666;
+        stroke-width: 1px;
+        fill: rgba(100, 100, 100, .3);" />
+
+    <!-- Erde -->
+    <circle cx="400" cy="400" r="20" style="fill: #000000" />
+
+    <!-- Mond -->
+    <circle
+      cx="0"
+      cy="360"
+      r="10"
+      style="fill: #000000;
+        transform-origin: 400px 400px;
+        transform: rotate(5.1deg);" />
+
+    <!-- Knotenpunkte -->
+    <circle
+      cx="400"
+      cy="200"
+      r="10"
+      style="stroke: #000000;
+        stroke-width: 2px;
+        fill: none;
+        transform-origin: 400px 400px;
+        transform: rotate(5.1deg);" />
+    <circle
+      cx="400"
+      cy="600"
+      r="10"
+      style="stroke: #000000;
+        stroke-width: 2px;
+        fill: none;
+        transform-origin: 400px 400px;
+        transform: rotate(5.1deg);" />
+
+    <!-- Knotenlinie -->
+    <path
+      d="M400 210 L400 590"
+      style="stroke: #000000;
+        stroke-width: 2px;
+        stroke-dasharray: 4;
+        transform-origin: 400px 400px;
+        transform: rotate(5.1deg);" />
+
+  </g>
+</svg>

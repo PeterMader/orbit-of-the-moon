@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 800 800"
+    version="1.1"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="mondbahn-ueberspitzt">
+
+    <!-- Mondbahn -->
+    <path
+      d="M400 200 A400 200 1 0 1 800 400 A400 200 1 0 1 400 600 A400 200 1 0 1 -5 400 A400 200 1 0 1 400 200"
+      style="stroke: #666666; stroke-width: 1px; fill: none;" />
+
+    <!-- Mond -->
+    <circle cx="400" cy="200" r="10" style="fill: #000000" />
+
+    <!-- Erde -->
+    <circle cx="746.4" cy="400" r="20" style="fill: #000000" />
+
+    <!-- Apoapsis -->
+    <path
+      d="M440 400 L780 400"
+      style="stroke: #000000; stroke-width: 2px; fill: none;" />
+    <text
+      x="610"
+      y="380"
+      text-anchor="middle">Apoapsis: 405 500 km</text>
+
+    <!-- Periapsis -->
+    <path
+      d="M400 360 L400 220"
+      style="stroke: #000000; stroke-width: 2px; fill: none;" />
+    <text
+      x="420"
+      y="290"
+      text-anchor="middle"
+      style="transform-origin: 420px 290px; transform: rotate(90deg);">Periapsis: 363 300 km</text>
+
+  <!-- Brennpunkte -->
+  <circle cx="746.4" cy="400" r="3" style="fill: #FF0000" />
+  <circle cx="53.6" cy="400" r="3" style="fill: #FF0000" />
+  </g>
+</svg>
