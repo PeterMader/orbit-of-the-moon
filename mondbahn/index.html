@@ -10,10 +10,39 @@
         width: 100%;
         padding: 0;
         margin: 0;
-        background: #000000;
+        background-color: #EEEEEE;
       }
       canvas {
         position: absolute;
+        background: #000000;
+      }
+      .menu {
+        position: absolute;
+        left: 0;
+        width: 400px;
+      }
+      input {
+        border: 1px solid #CCCCCC;
+        width: 50px;
+        padding: 5px;
+      }
+      button {
+        border: 1px solid #CCCCCC;
+        padding: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #EEEEEE;
+      }
+      input:focus {
+        background: #EEEEEE;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      tr {
+        padding: 10px;
       }
     </style>
 
@@ -22,5 +51,18 @@
   </head>
   <body>
     <canvas id="canvas" width="600" height="400"></canvas>
+    <div class="menu">
+      <h3>Eine Simulation der Mondbahn</h3>
+      <table>
+        <tr><td>Gro&szlig;e Halbachse</td><td><input type="number" min="1" max="1000" value="100" id="input-lsa"></td></tr>
+        <tr><td>Kleine Halbachse</td><td><input type="number" min="1" max="1000" value="100" id="input-ssa"></td></tr>
+        <tr><td>Radius des Mondes</td><td><input type="number" min="1" max="1000" value="5" id="input-rm"></td></tr>
+        <tr><td>Radius der Erde</td><td><input type="number" min="1" max="1000" value="20" id="input-re"></td></tr>
+        <tr><td>Bahngeschwindigkeit</td><td><span id="output-vel">0</span></td></tr>
+        <tr><td>Exzentrit&auml;t</td><td><span id="output-ex">0</span></td></tr>
+        <tr><td>FPS</td><td><span id="output-fps">0</span></td></tr>
+        <tr><td colspan="2"><button id="commit">Ausf&uuml;hren</button></td></tr>
+      </table>
+    </div>
   </body>
 </html>
