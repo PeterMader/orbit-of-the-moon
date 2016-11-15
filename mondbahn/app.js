@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let GEOMETRIC_FOCUS = 0
 
-  let lastFrame = Date.now(), fps = 0, size = 0
+  let lastFrame = Date.now(), fps = 0, size = 0, lastUpdate = 100
 
   let count = 0, velocity = 0, moonX = 0, moonY = 0, deltaX = 0, deltaY = 0, distance = 0
 
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     MASS_MOON = cube(MOON_RADIUS)
     MASS_EARTH = cube(EARTH_RADIUS)
     MASS_PROPORTION = MASS_EARTH / MASS_MOON
+    output.ex.textContent = GEOMETRIC_FOCUS.toFixed(2)
   }
 
   const mainLoop = new Loop(() => {
@@ -92,8 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Output befüllen */
     output.vel.textContent = velocity.toFixed(4)
-    output.ex.textContent = GEOMETRIC_FOCUS.toFixed(2)
-    output.fps.textContent = fps.toFixed(0)
+    if ((lastUpdate += 1) > 100) {
+      lastUpdate = 0
+      output.fps.textContent = fps.toFixed(0)
+    }
 
     /* Mondbahn zeichnen */
     ctx.strokeStyle = '#444444'
